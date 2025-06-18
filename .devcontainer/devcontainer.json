@@ -6,15 +6,10 @@
   "waitFor": "onCreateCommand",
   "updateContentCommand": "yarn",
   "postCreateCommand": "",
-  "postAttachCommand": "yarn dev",
   "customizations": {
-    "codespaces": {
-      "openFiles": ["data/blog/code-sample.mdx"]
-    },
+    "codespaces": { "openFiles": ["data/blog/code-sample.mdx"] },
     "vscode": {
-      "settings": {
-        "editor.formatOnSave": true
-      },
+      "settings": { "editor.formatOnSave": true },
       "extensions": ["dbaeumer.vscode-eslint", "esbenp.prettier-vscode"]
     }
   },
@@ -24,5 +19,12 @@
       "onAutoForward": "openPreview"
     }
   },
-  "forwardPorts": [3000]
+  "forwardPorts": [3000],
+
+  // ✳️ 여기 아래에 "features" 추가!
+  "features": {
+    "ghcr.io/devcontainers/features/sshd:1": {
+      "version": "latest"
+    }
+  }
 }
